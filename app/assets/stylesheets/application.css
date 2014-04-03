@@ -25,6 +25,7 @@ h1 {
 	font-family: 'PT Sans', sans-serif;
 	color: #FFFFCC;
 	padding-left: 8%;
+	margin-bottom: 3%;
 }
 .header {
 	color: white;
@@ -33,7 +34,10 @@ h1 {
 	height:5%;
 	background-color: #5C85FF;
 	padding-top: 1%;
+	border-bottom: double 15px #FFFFCC;
+	border-top: double 15px #FFFFCC;
 }
+
 *= require bootstrap.min
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

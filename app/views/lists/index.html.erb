@@ -14,9 +14,10 @@
 		<h3> Here Are You Grocery Lists </h3>	
 		<% @lists.each do |list| %>
 		  <section>
-		   <b>List: </b><%= list.name %>
-		    <p><b>Date Created: </b><%= list.date_created %></p>
-		  </section>
+		  	<h3><%= link_to list.name%></h3>
+		    <h4><%= list.date_created %></h4>
+		  	<button type="button" class="btn btn-default"><%= link_to "Delete", list_path(list.id), method: 'delete' %></button>
+		  	<button type="button" class="btn btn-default"><%= link_to "Edit Your List", edit_list_path(list) %></button>
 		<% end %>
 	</div>
 
