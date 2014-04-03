@@ -10,7 +10,11 @@
 		  <section>
 		  	<h3><%= link_to list.name, list_path(list.id)%></h3>
 		    <h4><%= list.date_created %></h4>
-		    <h5><%= list.items %>
+		    <h5>
+			    <% list.items.each do |item| %>
+	   			<%= item.name%>
+	 			<% end %>
+ 			</h5>
 		  	<button type="button" class="btn btn-default"><%= link_to "Delete", list_path(list.id), method: 'delete' %></button>
 		  	<button type="button" class="btn btn-default"><%= link_to "Edit Your List", edit_list_path(list) %></button>
 		<% end %>

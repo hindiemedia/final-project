@@ -28,7 +28,7 @@ def index
 
 	def update
 	   @item = Items.find( params[:id])
-	   safe_item_params = params.require(:item).permit(:name)
+	   safe_item_params = params.require(:item).permit(:name, :list_id)
 
 	   if @item.update(safe_item_params)
 	      redirect_to @item
@@ -45,6 +45,6 @@ def index
 
 private
 	     def item_params
-		    params.require(:item).permit(:name)
+		    params.require(:item).permit(:name, :list_id)
 		 end
 end
