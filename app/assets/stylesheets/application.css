@@ -1,0 +1,50 @@
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+h1 {
+	font-family: 'PT Sans', sans-serif;
+}
+.shoppingCart {
+	padding-left:1%;
+	float:left;
+	padding-top:1%;
+}
+.title {
+	font-family: 'PT Sans', sans-serif;
+	color: #FFFFCC;
+	padding-left: 8%;
+}
+.header {
+	color: white;
+}
+.nav {
+	height:5%;
+	background-color: #5C85FF;
+	padding-top: 1%;
+}
+*= require bootstrap.min
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
