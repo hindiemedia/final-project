@@ -1,5 +1,5 @@
 class AddListIdToItems < ActiveRecord::Migration
   def change
-  	add_column :list_id
+  	add_column :items, :list_id, :integer
   end
 end

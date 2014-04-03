@@ -1,5 +1,5 @@
 class AddUserIdToLists < ActiveRecord::Migration
   def change
-  	add_column :user_id
+  	 add_column :items, :user_id, :integer
   end
 end
