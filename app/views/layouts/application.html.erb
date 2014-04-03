@@ -8,7 +8,24 @@
   <%= stylesheet_link_tag "bootstrap" %>
 </head>
 <body>
-
+	<div class="nav clearfix">
+		<div class="header col-md-8 col-md-offset-1">
+			<img src="http://hindiemedia.com/wp-content/uploads/2014/04/shopping_cart1.png" alt="shopping cart" class="shoppingCart">
+			<h1 class="title"> Welcome to Grocery Buddy</h1>
+		</div>
+		<div class="signIn">
+		<% if user_signed_in? %>
+          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, style: 'color:#FFFFcc;' %></li>
+        <% else %>
+          <li><%= link_to "Sign up", new_user_registration_path %></li> 
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+        <% end %>
+    </div>
+	 	<p class="notice"><%= notice %></p>
+	    <p class="alert" style="padding:0;"><%= alert %></p>
+		</ul>
+	</div>
+    
 <%= yield %>
 
 </body>
