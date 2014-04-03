@@ -4,7 +4,7 @@ def index
 	end
 
 	def create
-    @item = Items.new(item_params)
+    @item = Item.new(item_params)
 	    if @item.save
 	      redirect_to root_path
 	  	else
@@ -22,12 +22,12 @@ def index
 	end
 
 	def show
-    	@item = Items.find params[:id]
+    	@item = Item.find params[:id]
     	 redirect_to root_path
   	end
 
 	def update
-	   @item = Items.find( params[:id])
+	   @item = Item.find( params[:id])
 	   safe_item_params = params.require(:item).permit(:name, :list_id)
 
 	   if @item.update(safe_item_params)
